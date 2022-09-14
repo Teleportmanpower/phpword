@@ -400,6 +400,7 @@ Currently the following fields are supported:
 - DATE
 - XE
 - INDEX
+- REF
 
 .. code-block:: php
 
@@ -427,6 +428,12 @@ For instance for the INDEX field, you can do the following (See `Index Field for
     //this actually adds the index
     $section->addField('INDEX', array(), array('\\e "	" \\h "A" \\c "3"'), 'right click to update index');
 
+    //reference a book mark
+    $section->addField(
+        'REF',
+        array('name' => 'your-bookmark'),
+        array('InsertParagraphNumberRelativeContext','CreateHyperLink')
+    );
 Line
 ----
 
